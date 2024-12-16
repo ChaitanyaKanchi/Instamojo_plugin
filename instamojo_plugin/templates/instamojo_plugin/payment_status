@@ -1,0 +1,4 @@
+<h1>Payment Status</h1>
+<p>Transaction ID: {{ payment.transaction_id }}</p>
+<p>Status: {{ payment.status }}</p>
+<p>Amount: {{ payment.amount }}</p>

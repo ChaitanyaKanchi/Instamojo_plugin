@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to Paytm</title>
+</head>
+<body>
+    <h2>Redirecting to Paytm...</h2>
+    <form method="POST" action="{{ paytm_url }}" name="paytm_form" id="paytm_form">
+        {% csrf_token %}
+        {% for key, value in payment_data.items %}
+            <input type="hidden" name="{{ key }}" value="{{ value }}">
+        {% endfor %}
+        <input type="submit" value="Submit" style="display:none;">
+    </form>
+    
+    <script>
+        document.getElementById('paytm_form').submit();
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<form method="POST" action="{% url 'create_payment_request' %}">
+    {% csrf_token %}
+    <!-- <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br> -->
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+    <label for="phone">Phone:</label><br>
+    <input type="text" id="phone" name="phone" required><br><br>
+    <label for="amount">Amount:</label><br>
+    <input type="text" id="amount" name="amount" required><br><br>
+    <input type="submit" value="Pay Now">
+</form>
